@@ -1,0 +1,62 @@
+/* Flex Boxes split into three columns */
+.aboutflex{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vw;
+    margin-bottom: 2.5vw;
+}
+
+.minime{
+    flex-direction: column;
+    width: 15vw;
+}
+
+.circle{
+    width: 16vw;
+    height: 16vw;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 1.5vw;
+}
+
+img{
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.school{
+    color: #aeaeae;
+    font-family: "Roboto", serif;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+.bio{
+    flex-direction: column;
+    color: #EAEAEA;
+    font-family: "Roboto", serif;
+    font-size: 1.5vw;
+    text-align: left;
+    width: 40vw;
+}
+
+.rightside{
+    flex-direction: column;
+    width: 15vw;
+}
+
+.skills{
+    color: #EAEAEA;
+    font-family: "Bebas Neue", serif;
+    font-size: 2.5vw;
+
+}
+
+li{
+    color: #EAEAEA;
+    font-family: "Roboto", serif;
+    font-size: 1.3vw;
+}
