@@ -1,0 +1,130 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 5vw;
+    margin-top: 4%;
+    margin-bottom: -1vw;
+}
+
+h2{
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-size: 2vw;
+}
+
+h3{
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 3vw;
+    margin: 3% 20%; 
+}
+
+hr{
+    display: block;
+    border: 1.5px solid black;
+    width: 90%;
+    margin: auto;
+}
+
+p{
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+}
+
+img{
+    height: 50%;
+    width: 50%;
+}
+
+video{
+    display: block;
+    height: 70%;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Top Navigation Bar */
+.top-bar{
+    font-family: "Pridi", serif;
+    font-size: 1.5vw;
+    font-weight: normal;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    top: -9px;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    padding: 15px 4.2%;
+    margin-top: -10px;
+    margin-bottom: -1%;
+    align-items: center;
+    z-index: 100;
+    overflow: hidden;
+    position: relative;
+    background-color: #006400;
+}
+
+/* Opening Image */
+.imageheader{
+    display: flex;
+    background-color: #006400;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening{
+    width: 55%;
+    height: 55%;
+}
+
+/* Intro */
+.title{
+    text-align: center;
+}
+
+.intro{
+    margin: 3% 20%;
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+.note{
+    margin: 3% 20%;
+    font-style: italic;
+    font-size: 0.7vw;
+    text-align: center;
+}
+
+/* Flex Boxes for Text and Images */
+.inspo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 70%;
+    width: 70%;
+}
+
+.imgcenter{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.central{
+    margin: 3% 20%;
+}
