@@ -1,62 +1,135 @@
-/* Flex Boxes split into three columns */
+/* ==========================================================================
+   About Me
+   Same palette as the rest of the site: background #232322, text #EAEAEA,
+   muted text #aeaeae, gold accent #b38d0c.
+   ========================================================================== */
+
 .aboutflex{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2vw;
-    margin-bottom: 2.5vw;
+    align-items: flex-start;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+    gap: 2vw;
 }
 
+/* ---- Photo column ---------------------------------------------------------- */
+
 .minime{
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 15vw;
 }
 
-.circle{
+.photo-frame{
     width: 16vw;
     height: 16vw;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1.6vw;
 }
 
-img{
-    display: inline;
-    margin: 0 auto;
+.circle{
+    display: block;
+    width: 100%;
     height: 100%;
-    width: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #232322, 0 0 0 7px #b38d0c;
 }
 
 .school{
     color: #aeaeae;
     font-family: "Roboto", serif;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     text-align: center;
+    margin-top: 0.3vw;
 }
+
+/* ---- Bio column ---------------------------------------------------------- */
 
 .bio{
-    flex-direction: column;
-    color: #EAEAEA;
-    font-family: "Roboto", serif;
-    font-size: 1.5vw;
-    text-align: left;
-    width: 40vw;
-}
-
-.rightside{
-    flex-direction: column;
-    width: 15vw;
-}
-
-.skills{
-    color: #EAEAEA;
-    font-family: "Bebas Neue", serif;
-    font-size: 2.5vw;
-
-}
-
-li{
     color: #EAEAEA;
     font-family: "Roboto", serif;
     font-size: 1.3vw;
+    line-height: 1.6;
+    text-align: left;
+    width: 38vw;
+}
+
+.bio p{
+    margin-bottom: 1.4vw;
+}
+
+.bio p:last-child{
+    margin-bottom: 0;
+}
+
+/* ---- Skills / Interests column ---------------------------------------------------------- */
+
+.rightside{
+    width: 17vw;
+}
+
+.section-eyebrow{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 0.85vw;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b38d0c;
+    margin-bottom: 0.4vw;
+}
+
+.section-eyebrow:not(:first-child){
+    margin-top: 2.4vw;
+}
+
+.skills{
+    font-family: "Bebas Neue", serif;
+    font-size: 2.2vw;
+    color: #EAEAEA;
+    margin-bottom: 1vw;
+}
+
+.taglist{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6vw;
+}
+
+.tag{
+    color: #EAEAEA;
+    font-family: "Roboto", serif;
+    font-size: 0.9vw;
+    border: 1px solid #b38d0c;
+    padding: 0.4vw 0.8vw;
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 768px){
+    .aboutflex{
+        flex-direction: column;
+        align-items: center;
+        gap: 8vw;
+    }
+
+    .minime,
+    .bio,
+    .rightside{
+        width: 88vw;
+    }
+
+    .photo-frame{
+        width: 45vw;
+        height: 45vw;
+    }
+
+    .school{ font-size: 3.6vw; }
+    .bio{ font-size: 4.2vw; }
+    .bio p{ margin-bottom: 5vw; }
+    .section-eyebrow{ font-size: 3vw; }
+    .skills{ font-size: 7vw; }
+    .tag{ font-size: 3.2vw; padding: 1.5vw 3vw; }
 }

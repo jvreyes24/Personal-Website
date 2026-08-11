@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Digital Design / Portfolio Grid
+   Palette note: #b38d0c is the site's existing (previously unused) gold
+   token from JR_style.css — reused here as the one accent color for tags,
+   underlines, and hover states, so nothing new is introduced.
+   ========================================================================== */
+
+.portfolio-intro{
+    max-width: 44vw;
+    margin: 0 auto;
+    padding: 3vw 4% 1vw;
+    text-align: center;
+}
+
+.portfolio-lede{
+    color: #aeaeae;
+    font-family: "Roboto", serif;
+    font-size: 1.3vw;
+    line-height: 1.5;
+}
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3vw;
+    padding: 2vw 4% 5vw;
+}
+
+/* ---- Project Card ------------------------------------------------------ */
+
+.project-card{
+    background-color: #2c2c2b;
+    border: 1px solid #35342f;
+    overflow: hidden;
+}
+
+.project-link{
+    display: block;
+    padding: 0;
+    color: inherit;
+}
+
+.project-media{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+}
+
+.project-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card:hover .project-image{
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.project-tag{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    background-color: #b38d0c;
+    color: #171716;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.4vw 0.8vw;
+}
+
+.project-body{
+    padding: 1.6vw;
+}
+
+.project-title{
+    font-family: "Bebas Neue", serif;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    margin-bottom: 0.8vw;
+}
+
+.project-desc{
+    font-family: "Roboto", serif;
+    font-size: 1.1vw;
+    line-height: 1.5;
+    color: #aeaeae;
+    margin-bottom: 1.4vw;
+}
+
+.project-cta{
+    display: inline-block;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .project-cta{
+    color: #b38d0c;
+    border-bottom-color: #b38d0c;
+}
+
+.project-cta span{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-cta span{
+    transform: translateX(4px);
+}
+
+/* Scroll-reveal state, toggled by JS/uxui.js. If JS never fires
+   (disabled, fails to load), the fallback below keeps cards visible. */
+.project-card{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.no-js .project-card{
+    opacity: 1;
+    transform: none;
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 768px){
+    .portfolio-intro{
+        max-width: 90vw;
+    }
+
+    .portfolio-lede{
+        font-size: 4vw;
+    }
+
+    .portfolio-grid{
+        grid-template-columns: 1fr;
+        gap: 8vw;
+        padding: 4vw 5% 12vw;
+    }
+
+    .project-tag{
+        font-size: 3vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .project-title{
+        font-size: 6vw;
+    }
+
+    .project-desc{
+        font-size: 3.6vw;
+    }
+
+    .project-cta{
+        font-size: 4vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .project-card,
+    .project-image,
+    .project-cta,
+    .project-cta span{
+        transition: none;
+    }
+
+    .project-card{
+        opacity: 1;
+        transform: none;
+    }
+}

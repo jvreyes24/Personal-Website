@@ -1,10 +1,15 @@
-/* Page Header */
+/* Page Header
+   Same palette as the rest of the site: darkened photo banner with an
+   outlined title, now tied into the gold accent (#b38d0c) used
+   everywhere else on the site. */
+
 .pagecontainer{
     position: relative;
     text-align: center;
     color: #232322;
     margin-top: -30px;
     padding-bottom: 2%;
+    border-bottom: 3px solid #b38d0c;
 }
 
 .imghead{
@@ -12,6 +17,19 @@
     height: 40vw;
     filter: brightness(40%);
     object-fit: cover;
+}
+
+/* Warm gold wash over the bottom of the banner photo, tying it to the
+   accent color without changing the photo itself. */
+.pagecontainer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(179, 141, 12, 0.35), rgba(179, 141, 12, 0) 55%);
+    pointer-events: none;
 }
 
 .giant{
@@ -25,6 +43,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 1;
 }
 
-
+/* Gold underline accent beneath the title, sized to the text above it. */
+.giant::after{
+    content: '';
+    display: block;
+    width: 40%;
+    height: 3px;
+    margin: 1.4vw auto 0;
+    background-color: #b38d0c;
+}

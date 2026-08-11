@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Homepage — Hero + Explore Grid
+   Same palette as the rest of the site: background #232322, text #EAEAEA,
+   muted text #aeaeae, and the gold #b38d0c accent introduced on the
+   Digital Design page, reused here to keep the two pages feeling like one
+   system.
+   ========================================================================== */
+
+/* ---- Hero ---------------------------------------------------------------- */
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    padding: 5vw 6% 6vw;
+}
+
+.hero-text{
+    max-width: 34vw;
+}
+
+.hero-eyebrow{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 1vw;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b38d0c;
+    margin-bottom: 1.2vw;
+}
+
+.hero-name{
+    font-family: "Bebas Neue", serif;
+    font-size: 6.5vw;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    margin-bottom: 1.6vw;
+}
+
+.hero-opener{
+    font-family: "Roboto", serif;
+    font-size: 1.3vw;
+    line-height: 1.6;
+    color: #aeaeae;
+    margin-bottom: 2.4vw;
+}
+
+.scroll-cue{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8vw;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    transition: color 0.3s ease;
+}
+
+.scroll-cue:hover{
+    color: #b38d0c;
+}
+
+.scroll-line{
+    display: inline-block;
+    width: 2.5vw;
+    height: 2px;
+    background-color: #b38d0c;
+    transition: width 0.3s ease;
+}
+
+.scroll-cue:hover .scroll-line{
+    width: 4vw;
+}
+
+.hero-photo{
+    position: relative;
+    flex-shrink: 0;
+    width: 26vw;
+}
+
+.hero-image{
+    display: block;
+    width: 100%;
+    height: 32vw;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+
+.frame-corner{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    border: 0 solid #b38d0c;
+}
+
+.corner-tl{ top: -0.8vw; left: -0.8vw; border-top-width: 3px; border-left-width: 3px; }
+.corner-tr{ top: -0.8vw; right: -0.8vw; border-top-width: 3px; border-right-width: 3px; }
+.corner-bl{ bottom: -0.8vw; left: -0.8vw; border-bottom-width: 3px; border-left-width: 3px; }
+.corner-br{ bottom: -0.8vw; right: -0.8vw; border-bottom-width: 3px; border-right-width: 3px; }
+
+/* ---- Explore Grid ---------------------------------------------------------- */
+
+.explore-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3vw;
+    padding: 2vw 6% 6vw;
+    scroll-margin-top: 6vw;
+}
+
+.section-card{
+    background-color: #2c2c2b;
+    border: 1px solid #35342f;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-card.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.no-js .section-card{
+    opacity: 1;
+    transform: none;
+}
+
+.section-link{
+    display: block;
+    color: inherit;
+}
+
+.section-media{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+}
+
+.section-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.section-card:hover .section-image{
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.section-tag{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    background-color: #b38d0c;
+    color: #171716;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.4vw 0.8vw;
+}
+
+.section-body{
+    padding: 1.6vw;
+}
+
+.section-title{
+    font-family: "Bebas Neue", serif;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    margin-bottom: 0.8vw;
+}
+
+.section-desc{
+    font-family: "Roboto", serif;
+    font-size: 1.1vw;
+    line-height: 1.5;
+    color: #aeaeae;
+    margin-bottom: 1.4vw;
+}
+
+.section-cta{
+    display: inline-block;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    color: #EAEAEA;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.section-card:hover .section-cta{
+    color: #b38d0c;
+    border-bottom-color: #b38d0c;
+}
+
+.section-cta span{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover .section-cta span{
+    transform: translateX(4px);
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 768px){
+    .hero{
+        flex-direction: column-reverse;
+        padding: 8vw 6% 10vw;
+        gap: 8vw;
+    }
+
+    .hero-text{
+        max-width: 100%;
+    }
+
+    .hero-eyebrow{ font-size: 3vw; }
+    .hero-name{ font-size: 14vw; }
+    .hero-opener{ font-size: 4.2vw; }
+    .scroll-cue{ font-size: 3.6vw; }
+
+    .hero-photo{
+        width: 70vw;
+    }
+
+    .hero-image{
+        height: 80vw;
+    }
+
+    .explore-grid{
+        grid-template-columns: 1fr;
+        gap: 8vw;
+        padding: 4vw 5% 12vw;
+    }
+
+    .section-tag{ font-size: 3vw; padding: 1.5vw 3vw; }
+    .section-title{ font-size: 6vw; }
+    .section-desc{ font-size: 3.6vw; }
+    .section-cta{ font-size: 4vw; }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .section-card,
+    .section-image,
+    .section-cta,
+    .section-cta span,
+    .scroll-line{
+        transition: none;
+    }
+
+    .section-card{
+        opacity: 1;
+        transform: none;
+    }
+}
