@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,7 @@
 <body>
     <header class="top-bar">
         <a href="index.html" class="home">Jeremy Reyes</a>
-        
+
         <div class="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -33,18 +34,52 @@
         <h1 class="giant">Art Portfolio</h1>
     </div>
 
-    <div class="gallery">
-        <div class="galleryone">
-            <img class="portrait" src="images/artportfolio/Hannya_Mask.jpg">
-            <img class="portrait" src="images/artportfolio/Kaya_Natin_To! 2.jpg">
-        </div>
-        <div class="galleryone">
-            <img class="portrait" src="images/artportfolio/Snek.jpg">
-            <img class="portrait" src="images/artportfolio/Boo.jpg">
-        </div>
-        <div class="galleryland">
-            <img class="landscape" src="images/artportfolio/Dragon.jpg">
-        </div>
+    <div class="art-gallery">
+
+        <!-- ============================================================ -->
+        <!-- ART TILE TEMPLATE                                             -->
+        <!-- To add a new piece: copy one .art-tile block, then edit:      -->
+        <!--   1. src on .art-image  -> the artwork file                   -->
+        <!--   2. alt on .art-image  -> a short description                -->
+        <!--   3. .art-caption text  -> the piece's title                  -->
+        <!-- Add class="wide" to .art-tile to feature a landscape piece    -->
+        <!-- across two columns, as done below for "Dragon".                -->
+        <!-- ============================================================ -->
+
+        <figure class="art-tile">
+            <img class="art-image" src="images/artportfolio/Hannya_Mask.jpg" alt="Hannya Mask illustration">
+            <figcaption class="art-caption">Hannya Mask</figcaption>
+        </figure>
+
+        <figure class="art-tile">
+            <img class="art-image" src="images/artportfolio/Kaya_Natin_To! 2.jpg" alt="Kaya Natin To! illustration">
+            <figcaption class="art-caption">Kaya Natin To!</figcaption>
+        </figure>
+
+        <figure class="art-tile">
+            <img class="art-image" src="images/artportfolio/Snek.jpg" alt="Snek illustration">
+            <figcaption class="art-caption">Snek</figcaption>
+        </figure>
+
+        <figure class="art-tile">
+            <img class="art-image" src="images/artportfolio/Boo.jpg" alt="Boo illustration">
+            <figcaption class="art-caption">Boo</figcaption>
+        </figure>
+
+        <figure class="art-tile wide">
+            <img class="art-image" src="images/artportfolio/Dragon.jpg" alt="Dragon illustration">
+            <figcaption class="art-caption">Dragon</figcaption>
+        </figure>
+
     </div>
 
+    <!-- Lightbox, populated and toggled by JS/art.js -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <script src="JS/art.js"></script>
 </body>
+</html>
