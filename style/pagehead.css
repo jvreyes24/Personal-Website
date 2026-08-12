@@ -10,11 +10,11 @@
     margin-top: -30px;
     padding-bottom: 2%;
     border-bottom: 3px solid #b38d0c;
+    width: 100%;
+    height: 40vw;
 }
 
 .imghead{
-    width: 100%;
-    height: 40vw;
     filter: brightness(40%);
     object-fit: cover;
 }
