@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMtron - Project Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ============ NAV / LOGO ============ -->
+<header class="topbar">
+  <div class="logo">
+    <span class="logo-mark">
+      <img src="images/PMtronLogo.png" width="26" height="26">
+    </span>
+    <span class="logo-word">PM<span class="logo-word-accent">tron</span></span>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Project Showcase</p>
+    <h1 class="hero-title">Your AI Project Manager<br>that never sleeps</h1>
+    <p class="hero-sub" data-field="hero-subtitle">
+      PMtron is designed to give project managers instant updates by chatting 
+      directly with team members on workflows and tasks. 
+    </p>
+
+    <!-- Hero artwork slot: drop in your laptop / dashboard mockup here -->
+    <div class="hero-media" id="heroMedia">
+      <div class="media-slot pending large">
+        <div class="pending-stamp">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.3"/><path d="M1 15l5-5 4 4 6-7 5 5" stroke="currentColor" stroke-width="1.3"/></svg>
+          <span>Add your product / dashboard image<br>(set <code>heroImage</code> in script.js)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT OVERVIEW ============ -->
+<section class="section" id="overview">
+  <div class="section-inner">
+    <p class="eyebrow">01 - INTRODUCTION</p>
+    <h2 class="section-title">Project Overview</h2>
+
+    <div class="overview-grid">
+      <p class="overview-copy" data-field="overview-copy">
+        PMtron is an AI-powered project management tool designed to chat with team members concerning their workflows and tasks
+        then provide easy to read analylitics and graphs on their progress. With PMTron, project managers do not need to individually talk with every
+        team member and look at common roadblocks.
+      </p>
+
+      <dl class="overview-meta">
+        <div class="meta-item">
+          <dt>Role</dt>
+          <dd data-field="role">UX/UI Designer</dd>
+        </div>
+        <div class="meta-item">
+          <dt>Tools</dt>
+          <dd data-field="tools">Figma</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="overview-grid overview-grid-secondary">
+      <div class="overview-block">
+        <h3>Goal</h3>
+        <p data-field="goal">
+          Optimize and simplify a project manager's role without having to 
+          constantly talk and meet with team members for consistent updates
+        </p>
+      </div>
+      <div class="overview-block">
+        <h3>Solution</h3>
+        <p data-field="solution">
+          PMtron gathers and records updates from conversations, task progress, 
+          and workflow activity and turns into clear and easily 
+          accessible information project managers can use. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESIGN PROCESS ============ -->
+<section class="section" id="process">
+  <div class="section-inner">
+    <p class="eyebrow">02 - HOW IT WAS MADE</p>
+    <h2 class="section-title">Design Process</h2>
+    <div class="process-columns" id="processColumns"><!-- populated by script.js --></div>
+  </div>
+</section>
+
+<!-- ============ STYLE GUIDE ============ -->
+<section class="section" id="style-guide">
+  <div class="section-inner">
+    <p class="eyebrow">03 - VISUAL LANGUAGE</p>
+    <h2 class="section-title">Style Guide</h2>
+    <p class="section-lede" data-field="style-guide-lede">
+      A quick look at PMTron's color palette.
+    </p>
+
+    <!-- Style guide image slot -->
+    <div class="style-guide-media" id="styleGuideMedia">
+      <div class="media-slot pending large">
+        <div class="pending-stamp">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="9" r="1.4" fill="currentColor"/><circle cx="14" cy="9" r="1.4" fill="currentColor"/><circle cx="11" cy="14" r="1.4" fill="currentColor"/></svg>
+          <span>Add your color palette / style guide image<br>(set <code>styleGuideImage</code> in script.js)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE DESIGN SLIDESHOWS (x3) ============ -->
+<section class="section" id="page-designs">
+  <div class="section-inner">
+    <p class="eyebrow">04 - SELECTED SCREENS</p>
+    <h2 class="section-title">Page Designs</h2>
+    <div class="slideshows" id="slideshows"><!-- populated by script.js --></div>
+  </div>
+</section>
+
+<!-- ============ KEY TAKEAWAYS ============ -->
+<section class="section" id="takeaways">
+  <div class="section-inner">
+    <p class="eyebrow">05 - REFLECTION</p>
+    <h2 class="section-title">Key Takeaways</h2>
+    <div class="takeaways-list" id="takeawaysList"><!-- populated by script.js --></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo-word small">PM<span class="logo-word-accent">tron</span></span>
+    <p class="footer-note">Thanks for reading. Get in touch about the project or the process.</p>
+    <a class="footer-link" href="mailto:you@example.com" data-field="contact-email">jeremyvreyes24@gmail.com</a>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">x</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
